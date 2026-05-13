@@ -8,7 +8,16 @@ The goal of this setup is simplicity without losing personality:
 clean visuals, lightweight performance and a cinematic late-night feeling.
 
 ---
+# 📸 Preview
+![desktop](./assets/asset1.png)
 
+![terminal](./assets/asset2.png)
+
+![rofi and SwayNC](./assets/asset3.png)
+
+![wlogout](./assets/asset4.png)
+
+---
 # ✨ Features
 
 - Minimal monochrome aesthetic

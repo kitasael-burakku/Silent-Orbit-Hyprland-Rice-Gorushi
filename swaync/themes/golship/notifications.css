@@ -1,0 +1,114 @@
+/*****----- Variables de tu Paleta (Monocromo) -----*****/
+@define-color text            #ffffff;
+@define-color text-alt        #757575;
+@define-color background      #0a0a0a;
+@define-color background-alt  #1a1a1a;
+@define-color background-sec  #242424;
+@define-color accent          #ffffff;
+@define-color urgent          #ff4d4d;
+
+* {
+  all: unset;
+  color: @text;
+  font-size: 13px; /* Un poco más grande para mejor lectura */
+  font-family: "JetBrainsMono Nerd Font";
+  transition: 160ms ease;
+}
+
+/* 🔹 Contenedor general de notificaciones flotantes */
+.floating-notifications.background .notification-row .notification-background {
+  background: alpha(#0a0a0a, 0.9); /* Efecto cristal oscuro */
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  border: 1px solid alpha(@text, 0.15); /* Borde de cristal sutil */
+  background-clip: padding-box;
+  overflow: hidden;
+  margin: 12px;
+  padding: 4px;
+  box-shadow: 0 8px 24px alpha(#000000, 0.6);
+}
+
+/* 🔹 Notificación individual */
+.notification {
+  position: relative;
+  padding: 12px;
+  border-radius: 16px;
+}
+
+/* 🔴 Críticas (Mantenemos el borde rojo sutil) */
+.notification.critical {
+  border: 1px solid alpha(@urgent, 0.5);
+  box-shadow: inset 0 0 12px alpha(@urgent, 0.05);
+}
+
+/* 🔹 Contenido */
+.notification-content {
+  margin: 5px;
+}
+
+/* 🔹 Botón cerrar */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 6px;
+  border-radius: 8px;
+  background-color: transparent;
+  color: @text-alt;
+  min-width: 18px;
+  min-height: 18px;
+  z-index: 5;
+}
+
+.close-button:hover {
+  background-color: alpha(@urgent, 0.15);
+  color: @urgent;
+}
+
+/* 🔹 Acciones (Botones dentro) */
+.notification-action {
+  border-radius: 10px;
+  background-color: alpha(@background-sec, 0.8);
+  margin: 6px;
+  padding: 10px 14px;
+  border: 1px solid alpha(@text, 0.05);
+}
+
+.notification-action:hover {
+  background-color: @accent;
+  color: #0a0a0a;
+  border: 1px solid @accent;
+}
+
+/* 🔹 Imagen */
+.image {
+  margin: 5px 15px 5px 0;
+  border-radius: 10px;
+}
+
+/* 🔹 Texto */
+.summary {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: @text; /* Blanco puro para el título */
+  margin-right: 30px; 
+}
+
+.body {
+  font-size: 0.9rem;
+  color: @text-alt; /* Gris para el cuerpo, menos distractivo */
+  opacity: 0.9;
+}
+
+/* 🔹 Barra de progreso */
+.notification progress {
+  background-color: alpha(@text, 0.1);
+  border-radius: 10px;
+  margin-top: 12px;
+  min-height: 6px;
+}
+
+.notification progress highlight {
+  background-color: @accent; /* Barra blanca sólida */
+  border-radius: 10px;
+}

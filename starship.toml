@@ -1,0 +1,86 @@
+# ── Estructura Monocromática ──────────────────────────────────────────────
+
+format = """
+[](fg:#1a1a1a)\
+$username\
+$hostname\
+[](fg:#1a1a1a bg:#333333)\
+$directory\
+[](fg:#333333 bg:#4d4d4d)\
+$git_branch\
+$git_status\
+$python\
+$nodejs\
+$rust\
+$golang\
+$cmd_duration\
+[](fg:#4d4d4d)\
+\n$character"""
+
+add_newline = true
+
+# ── Usuario y Host (Fondo Negro Intenso) ──────────────────────────────────
+
+[username]
+show_always = true
+style_user = "bg:#1a1a1a fg:#ffffff bold" 
+style_root = "bg:#1a1a1a fg:#ff4f5e bold" # Rojo solo para root por seguridad
+format = '[$user]($style)'
+
+[hostname]
+ssh_only = false
+style = "bg:#1a1a1a fg:#a0a0a0"
+format = '[@$hostname]($style)'
+
+# ── Directorio (Fondo Gris Oscuro) ────────────────────────────────────────
+
+[directory]
+style = "bg:#333333 fg:#ffffff"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+"Projects" = "󱌢 "
+"Code" = " "
+
+# ── Git y Lenguajes (Fondo Gris Medio) ────────────────────────────────────
+
+[git_branch]
+symbol = "󰊢 "
+style = "bg:#4d4d4d fg:#ffffff"
+format = "[[ $symbol$branch ]($style)]($style)"
+
+[git_status]
+style = "bg:#4d4d4d fg:#ffffff"
+format = "[[($all_status$ahead_behind)]($style)]($style)"
+
+[python]
+symbol = " "
+style = "bg:#4d4d4d fg:#e0e0e0"
+format = '[[ $symbol($version )]($style)]($style)'
+
+[nodejs]
+symbol = " "
+style = "bg:#4d4d4d fg:#e0e0e0"
+format = '[[ $symbol($version )]($style)]($style)'
+
+[rust]
+symbol = " "
+style = "bg:#4d4d4d fg:#e0e0e0"
+format = '[[ $symbol($version )]($style)]($style)'
+
+# ── Duración y Prompt ─────────────────────────────────────────────────────
+
+[cmd_duration]
+min_time = 2_000
+style = "bg:#4d4d4d fg:#a0a0a0 italic"
+format = "[[ 󱎫 $duration ]($style)]($style)"
+
+[character]
+success_symbol = "[ ](bold #ffffff)"
+error_symbol   = "[ ](bold #ff4f5e)"

@@ -1,0 +1,174 @@
+/*****----- Configuration -----*****/
+configuration {
+    modi:                       "drun,run,filebrowser,window";
+    show-icons:                 true;
+    display-drun:               "󰀻";
+    display-run:                "󰁔";
+    display-filebrowser:        "󰉋";
+    display-window:             "󱂬";
+    drun-display-format:        "{name}";
+    window-format:              "{w} · {c}";
+}
+
+/*****----- Global Properties -----*****/
+* {
+    font:                        "JetBrainsMono Nerd Font 10";
+    
+    /* Paleta Monocromática Refinada */
+    bg-window:   #0a0a0ae6;      /* Negro profundo con ligera transparencia */
+    bg-element:  #1a1a1a;        /* Gris oscuro sólido */
+    fg:          #ffffff;        /* Blanco puro */
+    fg-alt:      #757575;        /* Gris medio para elementos secundarios */
+    
+    accent:      #ffffff;        /* El acento ahora es blanco puro */
+    border-subtle: #ffffff15;    /* Borde casi invisible para profundidad */
+    
+    background-color: transparent;
+}
+
+/*****----- Main Window -----*****/
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       750px;
+    enabled:                     true;
+    border-radius:               24px; 
+    border:                      1.5px;
+    border-color:                @fg-alt; /* Borde gris medio para sobriedad */
+    background-color:            @bg-window;
+    cursor:                      "default";
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     20px;
+    padding:                     35px;
+    children:                    [ "inputbar", "listview", "mode-switcher" ];
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px 0px;
+    padding:                     12px 20px;
+    border-radius:               12px;
+    background-color:            @bg-element;
+    border:                      0px 0px 2px 0px; /* Línea decorativa inferior */
+    border-color:                @fg;             /* Línea blanca sólida */
+    text-color:                  @fg;
+    children:                    [ "prompt", "entry" ];
+}
+
+prompt {
+    enabled:                     true;
+    background-color:            transparent;
+    text-color:                  @fg;
+    font:                        "JetBrainsMono Nerd Font Bold 12";
+}
+
+entry {
+    enabled:                     true;
+    background-color:            transparent;
+    text-color:                  @fg;
+    cursor:                      text;
+    placeholder:                 "Search...";
+    placeholder-color:           @fg-alt;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     2;
+    lines:                       6;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     8px; 
+    margin:                      5px 0px;
+    background-color:            transparent;
+    text-color:                  @fg;
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     15px; 
+    padding:                     10px 15px;
+    border-radius:               10px;
+    background-color:            transparent;
+    text-color:                  @fg-alt;
+    cursor:                      pointer;
+}
+
+element normal.normal {
+    background-color:            transparent;
+}
+
+/* Elemento Seleccionado - Estilo Invertido */
+element selected.normal {
+    background-color:            @bg-element;
+    text-color:                  @fg;          /* Texto blanco puro */
+    border:                      0px 0px 0px 5px;
+    border-radius:               8px;
+    border-color:                @fg;          /* Indicador lateral blanco */
+}
+
+element-icon {
+    size:                        28px;
+    cursor:                      inherit;
+}
+
+element-text {
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+    cursor:                      inherit;
+    text-color:                  inherit;
+}
+
+/*****----- Mode Switcher -----*****/
+mode-switcher {
+    enabled:                     true;
+    spacing:                     15px;
+    margin:                      10px 0px 0px 0px;
+}
+
+button {
+    expand:                      true;
+    padding:                     10px;
+    border-radius:               10px;
+    background-color:            @bg-element;
+    text-color:                  @fg-alt;
+    cursor:                      pointer;
+    border:                      1px;
+    border-color:                @border-subtle;
+}
+
+button selected {
+    background-color:            @fg;          /* Fondo blanco */
+    text-color:                  @bg-element;  /* Texto oscuro para contraste */
+}
+
+/*****----- Message -----*****/
+message {
+    background-color:            transparent;
+}
+
+textbox {
+    padding:                     15px;
+    border-radius:               12px;
+    background-color:            @bg-element;
+    text-color:                  @fg;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+    border:                      1px;
+    border-color:                @fg-alt;
+}

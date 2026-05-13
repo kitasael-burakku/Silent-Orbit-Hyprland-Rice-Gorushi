@@ -1,0 +1,62 @@
+{
+  "positionX": "right",
+  "positionY": "top",
+  "layer": "top",
+  "cssPriority": "user",
+  "control-center-layer": "top",
+  "fit-to-screen": true,
+  "keyboard-shortcuts": true,
+  "transition-time": 200,
+
+  /* Geometría de la Ventana */
+  "control-center-width": 340,
+  "control-center-height": 400,
+  "control-center-margin-top": 10,
+  "control-center-margin-bottom": 10,
+  "control-center-margin-right": 10,
+  "control-center-margin-left": 10,
+
+  /* Ajustes de Notificación */
+  "notification-window-width": 350,
+  "notification-icon-size": 48,
+  "image-visibility": "never", /* Imagen eliminada para máxima limpieza */
+  
+  /* Comportamiento */
+  "timeout": 4,
+  "timeout-low": 2,
+  "timeout-critical": 0,
+  "hide-on-clear": true,
+  "hide-on-action": true,
+  "script-fail-notify": true,
+
+  /* Composición de Widgets */
+  "widgets": [
+    "title",
+    "dnd",
+    "mpris",
+    "volume",
+    "notifications"
+  ],
+
+  "widget-config": {
+    "title": {
+      "text": " SYSTEM CENTER ",
+      "clear-all-button": true,
+      "button-text": "󰎟 CLEAR"
+    },
+
+    "dnd": {
+      "text": " Silent Mode "
+    },
+
+    "mpris": {
+      "image-size": 60,
+      "image-radius": 12
+    },
+
+    "volume": {
+      "label": "󰕾 ",
+      "show-per-app": false /* Desactivado para mantener el minimalismo visual */
+    }
+  }
+}

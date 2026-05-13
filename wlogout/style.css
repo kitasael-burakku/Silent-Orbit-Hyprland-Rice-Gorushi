@@ -1,0 +1,110 @@
+* {
+    background-image: none;
+    box-shadow: none;
+    font-family: "JetBrainsMono Nerd Font";
+}
+
+/* =========================
+   FONDO GENERAL
+========================= */
+
+window {
+    background-color: rgba(8, 8, 8, 0.72);
+}
+
+/* =========================
+   BOTONES BASE
+========================= */
+
+button {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 22%;
+
+    background-color: rgba(255, 255, 255, 0.06);
+
+    margin: 8px;
+    padding: 12px;
+
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    outline-style: none;
+
+    transition:
+        all 0.25s cubic-bezier(.55, 0.0, .28, 1.682),
+        background-size 0.25s ease,
+        border 0.25s ease,
+        box-shadow 0.25s ease;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.04),
+        0 4px 18px rgba(0,0,0,0.35);
+}
+
+/* =========================
+   HOVER / FOCUS
+========================= */
+
+button:hover,
+button:focus {
+    background-color: rgba(255, 255, 255, 0.12);
+
+    background-size: 30%;
+
+    margin: 12px;
+
+    border-radius: 42px;
+    border: 1px solid rgba(255,255,255,0.18);
+
+    outline-style: none;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.08),
+        0 8px 30px rgba(0,0,0,0.45),
+        0 0 0 1px rgba(255,255,255,0.04);
+}
+
+/* =========================
+   CLICK
+========================= */
+
+button:active {
+    background-size: 24%;
+    background-color: rgba(255,255,255,0.18);
+
+    box-shadow:
+        inset 0 2px 8px rgba(0,0,0,0.4);
+}
+
+#shutdown:hover,
+#shutdown:focus {
+    background-color: rgba(160, 35, 35, 0.4);
+}
+
+/* ICONOS */
+#lock {
+    background-image: url("/home/kitasa-elburakku/.config/wlogout/icons/lock.png");
+}
+
+#logout {
+    background-image: url("/home/kitasa-elburakku/.config/wlogout/icons/logout.png");
+}
+
+#hibernate {
+    background-image: url("/home/kitasa-elburakku/.config/wlogout/icons/hibernate.png");
+}
+
+#shutdown {
+    background-image: url("/home/kitasa-elburakku/.config/wlogout/icons/shutdown.png");
+    background-color: rgba(120, 30, 30, 0.28);
+    border: 1px solid rgba(255, 80, 80, 0.15);
+}
+
+#reboot {
+    background-image: url("/home/kitasa-elburakku/.config/wlogout/icons/reboot.png");
+}
+
+#suspend {
+    background-image: url("/home/kitasa-elburakku/.config/wlogout/icons/suspend.png");
+}

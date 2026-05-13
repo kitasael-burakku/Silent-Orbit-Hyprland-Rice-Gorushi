@@ -42,9 +42,10 @@ clean visuals, lightweight performance and a cinematic late-night feeling.
 | Bar | Waybar |
 | Logout Menu | Wlogout |
 | Visualizer | Cava |
-| Launcher | Wofi |
-| Shell | Bash |
+| Launcher | Rofi |
+| Shell | Fish |
 | Font | JetBrainsMono Nerd Font |
+| File Manager | Thunar |
 
 # 🎵 Design Philosophy
 

@@ -9,13 +9,15 @@ clean visuals, lightweight performance and a cinematic late-night feeling.
 
 ---
 # 📸 Preview
-![desktop](./assets/asset1.png)
+![desktop](./assets/asset2.png)
 
-![terminal](./assets/asset2.png)
+![terminal](./assets/asset3.png)
 
-![rofi and SwayNC](./assets/asset3.png)
+![Brave and Cava](./assets/asset1.png)
 
-![wlogout](./assets/asset4.png)
+![SwayNC and Rofi](./assets/asset5.png)
+
+![Wlogout](./assets/asset4.png)
 
 ---
 # ✨ Features
@@ -68,12 +70,12 @@ The UI is designed to feel like:
 
 | Keybind | Action |
 |---|---|
-| `SUPER + Enter` | Open terminal |
+| `SUPER + T` | Open terminal |
 | `SUPER + Q` | Close active window |
 | `SUPER + R` | Open launcher |
-| `SUPER + SHIFT + D` | Toggle Cava |
-| `SUPER + SHIFT + C` | Kill Cava |
-| `SUPER + W` | Open browser |
+| `SUPER + B` | Open browser |
+
+>include some keybinds from devmode with codium and brave chatgpt and claude if you use IA
 
 # 🚀 Installation
 
